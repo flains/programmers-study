@@ -21,7 +21,6 @@ int solution(int a, int b) {
     {
         answer = atoi(ab);
     }
-    
     else
     {
         answer = atoi(ba);

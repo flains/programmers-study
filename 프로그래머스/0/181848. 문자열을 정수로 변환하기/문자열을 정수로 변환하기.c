@@ -1,0 +1,1 @@
+int solution(const char* n_str) {return atoi(n_str);}

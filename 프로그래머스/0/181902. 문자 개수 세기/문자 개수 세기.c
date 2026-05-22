@@ -4,13 +4,8 @@
 
 int* solution(const char* my_string)
 {
-    int* answer = (int*)malloc(sizeof(int) * 52);
+    int* answer = (int*)calloc(52, sizeof(int));
     int i = 0, len = strlen(my_string);
-    
-    for(i = 0; i < 52; i++)
-    {
-        answer[i] = 0;
-    }
     
     for(i = 0; i < len; i++)
     {

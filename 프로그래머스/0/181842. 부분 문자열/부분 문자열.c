@@ -1,4 +1,1 @@
-#include <string.h>
-
-int solution(const char* str1, const char* str2)
-{ return (strstr(str2, str1) == '\0') ? 0 : 1; }
+int solution(char* s1, char* s2){return strstr(s2, s1) ? 1 : 0;}

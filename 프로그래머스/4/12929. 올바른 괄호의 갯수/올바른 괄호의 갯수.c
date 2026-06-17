@@ -1,14 +1,16 @@
-long long solution(int num)
+typedef __int128 int128;
+
+int128 fact(int n)
 {
-    long long ans[15] = {1, 1};
-    int i = 0, j = 0;
-    
-    for(i = 2; i <= num; i++)
+    int128 res = 1;
+    for(int i = 1; i <= n; i++)
     {
-        for(j = 0; j < i; j++)
-        {
-            ans[i] += ans[i - j - 1] * ans[j];
-        }
+        res *= i;
     }
-    return ans[num];
+    return res;
+}
+
+long long solution(int n)
+{
+    return fact(2 * n) / (fact(n) * fact(n)) - fact(2 * n) / (fact(n + 1) * fact(n - 1));
 }
